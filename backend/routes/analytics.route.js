@@ -1,5 +1,6 @@
 import express from "express";
 import { protectRoute, adminRoute } from "../middleware/auth.middleware.js";
+import { getAnalyticsData, getDailySalesData } from "../controllers/analytics.controller.js";
 
 
 const router = express.Router();
@@ -15,7 +16,7 @@ router.get("/", protectRoute, adminRoute, async (req, res) => {
 
         res.json({
             analyticsData,
-            dailySales
+            dailySalesData: dailySales
         });
 
 

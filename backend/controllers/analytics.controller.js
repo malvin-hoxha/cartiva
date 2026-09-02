@@ -1,4 +1,6 @@
 import User from "../models/user.model.js";
+import Product from "../models/product.model.js";
+import Order from "../models/order.model.js";
 
 export const getAnalyticsData = async () => {
     const totalUsers = await User.countDocuments();
@@ -65,6 +67,7 @@ export const getDailySalesData = async (startDate, endDate) => {
 
 			return {
 				date,
+				name: date,
 				sales: foundData?.sales || 0,
 				revenue: foundData?.revenue || 0,
 			};

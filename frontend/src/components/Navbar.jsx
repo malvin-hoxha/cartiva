@@ -11,12 +11,12 @@ const Navbar = () => {
 
     return (
         <header className='fixed top-0 left-0 w-full bg-[#ebe2e3] bg-opacity-90 backdrop-blur-md shadow-lg  
-            z-40 transition-all duration-300 border-emerald-800'>
+            z-40 transition-all duration-300 border-b border-[#d8d0d1]'>
             <div className='container mx-auto px-4 py-3'>
                 <div className='flex flex-wrap justify-between items-center'>
                     <Link
                         to='/'
-                        className='text-2xl font-bold text-[#1a1a1a] items-center space-x-2 flex hover:text-emerald-700'
+                        className='text-2xl font-bold text-[#1a1a1a] items-center space-x-2 flex hover:text-[#088178]'
                     >
                         Cartiva
                     </Link>
@@ -24,7 +24,7 @@ const Navbar = () => {
                     <nav className='flex flex-wrap items-center gap-4'>
 						<Link
 							to={"/"}
-							className='text-[#1a1a1a] text-medium font-bold hover:text-emerald-700 transition duration-300 ease-in-out'
+							className='text-[#1a1a1a] text-medium font-bold hover:text-[#088178] transition duration-300 ease-in-out'
 						>
 							Home
 						</Link>
@@ -32,13 +32,13 @@ const Navbar = () => {
 						{user && (
 							<Link
 								to={"/cart"}
-								className='relative font-medium group text-[#1a1a1a] hover:text-emerald-700 transition duration-300 ease-in-out'
+								className='relative font-medium group text-[#1a1a1a] hover:text-[#088178] transition duration-300 ease-in-out'
 							>
-								<ShoppingCart className='inline-block mr-1 group-hover:text-emerald-700' size={20} />
+								<ShoppingCart className='inline-block mr-1 group-hover:text-[#088178]' size={20} />
 								{cart.length > 0 && (
 									<span
-										className='absolute -top-2 -left-2 bg-emerald-500 text-white rounded-full px-2 py-0.5 
-									text-xs group-hover:bg-emerald-400 transition duration-300 ease-in-out'
+										className='absolute -top-2 -left-2 bg-[#088178] text-white rounded-full px-2 py-0.5 
+									text-xs group-hover:bg-[#066c65] transition duration-300 ease-in-out'
 									>
 										{cart.length}
 									</span>
@@ -48,7 +48,7 @@ const Navbar = () => {
 
                         {isAdmin && (
 							<Link
-								className='bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-1 rounded-md font-medium
+								className='bg-[#088178] hover:bg-[#066c65] text-white px-3 py-1 rounded-md font-medium
 								    transition duration-300 ease-in-out flex items-center'
 								to={"/secret-dashboard"}
 							>
@@ -59,7 +59,7 @@ const Navbar = () => {
 
 						{user ? (
 							<button
-								className='bg-gray-700 hover:bg-red-900 text-white cursor-pointer px-3 py-1 rounded-md font-medium	
+								className='border border-[#d8d0d1] bg-white hover:border-red-600 hover:bg-red-600 text-[#1a1a1a] hover:text-white cursor-pointer px-3 py-1 rounded-md font-medium	
                                     transition duration-300 ease-in-out flex items-center'
 								onClick={logout}
 							>
@@ -70,7 +70,7 @@ const Navbar = () => {
 							<>
 								<Link
 									to={"/signup"}
-									className='bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-4 
+									className='bg-[#088178] hover:bg-[#066c65] text-white py-2 px-4 
 									rounded-md flex items-center transition duration-300 ease-in-out'
 								>
 									<UserPlus className='mr-2' size={18} />
@@ -78,7 +78,7 @@ const Navbar = () => {
 								</Link>
 								<Link
 									to={"/login"}
-									className='bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 
+									className='border border-[#088178] bg-white hover:bg-[#088178] text-[#088178] hover:text-white py-2 px-4 
 									rounded-md flex items-center transition duration-300 ease-in-out'
 								>
 									<LogIn className='mr-2' size={18} />

@@ -17,8 +17,8 @@ const ProductCard = ({ product }) => {
 	};
 
 	return (
-		<div className="group relative min-w-0 rounded-[20px] border border-[#ebe2e3] bg-white p-2.5 shadow-[20px_20px_30px_rgba(0,0,0,0.02)] transition-all duration-200 hover:shadow-[20px_20px_30px_rgba(0,0,0,0.06)]">
-			<div className="overflow-hidden rounded-[20px] bg-gray-100">
+		<div className="group relative min-w-0 rounded-md border border-[#d8d0d1] bg-white p-2.5 shadow-sm transition-all duration-200 hover:shadow-md">
+			<div className="overflow-hidden rounded-md bg-gray-100">
 				{product.image ? (
 					<img className="aspect-[4/5] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]" src={product.image} alt={product.name} />
 				) : (

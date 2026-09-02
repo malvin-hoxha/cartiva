@@ -1,5 +1,8 @@
 import { models } from "../data/models";
+import { useEffect } from "react";
 import CategoryItem from "../components/CategoryItem";
+import { useProductStore } from "../stores/useProductStore";
+import FeaturedProducts from "../components/FeaturedProducts";
 
 const heroBanner = "/hero-banner.jpg";
 
@@ -9,13 +12,11 @@ const categories = [
 ]
 
 const HomePage = () => {
-  const featuredProducts = models.filter(
-    (model) => model.collection === "featured"
-  );
+  const { fetchFeaturedProducts, products, isLoading } = useProductStore();
 
-  const newArrivals = models.filter(
-    (model) => model.collection === "new"
-  );
+	useEffect(() => {
+		fetchFeaturedProducts();
+	}, [fetchFeaturedProducts]);
 
   return (
     <main className="w-full bg-white text-[#1a1a1a]">
@@ -65,6 +66,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {!isLoading && products.length > 0 && <FeaturedProducts featuredProducts={products} />}
 
       {/* SALE BANNER */}
       <section className="my-10 flex min-h-75 w-full flex-col items-center justify-center bg-[#ebe2e3] px-5 text-center">
