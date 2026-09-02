@@ -3,8 +3,7 @@ import React from 'react'
 import { useEffect } from "react";
 import { useProductStore } from "../stores/useProductStore";
 import { useParams } from "react-router-dom";
-import { motion } from "framer-motion";
-import ProductCardCa from "../components/ProductCardCa";
+import ProductCard from "../components/ProductCard";
 
 const CategoryPage = () => {
 
@@ -34,7 +33,7 @@ const CategoryPage = () => {
 					)}
 
 					{products?.map((product) => (
-						<ProductCardCa key={product._id} product={product} />
+						<ProductCard key={product._id} product={product} />
 					))}
 				</div>
 			</div>

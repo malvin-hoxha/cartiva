@@ -1,4 +1,3 @@
-import ProductCard from "../components/ProductCard";
 import { models } from "../data/models";
 import CategoryItem from "../components/CategoryItem";
 
@@ -66,32 +65,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-
-      {/* FEATURED PRODUCTS */}
-      <section className="px-5 py-14 sm:px-10 lg:px-20">
-
-        <div className="mb-7 text-center">
-          <h2 className="text-3xl font-bold text-[#222] sm:text-[46px] sm:leading-13.5">
-            All Products
-          </h2>
-
-          <p className="mt-2 text-base text-[#465b52]">
-            Spring Collection New Modern Design
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-20">
-          {featuredProducts.map((product) => (
-            <ProductCard
-              key={product.name}
-              product={product}
-            />
-          ))}
-        </div>
-
-      </section>
-
 
       {/* SALE BANNER */}
       <section className="my-10 flex min-h-75 w-full flex-col items-center justify-center bg-[#ebe2e3] px-5 text-center">
