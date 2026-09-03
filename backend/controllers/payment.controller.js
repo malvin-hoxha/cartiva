@@ -118,6 +118,13 @@ export const checkoutSuccess = async (req, res) => {
         const { sessionId } = req.body;
 		const session = await stripe.checkout.sessions.retrieve(sessionId);
 
+        if (session.metadata?.userId !== req.user._id.toString()) {
+            return res.status(403).json({
+                success: false,
+                message: "Checkout session does not belong to this user",
+            });
+        }
+
         if (session.payment_status !== "paid") {
             return res.status(400).json({
                 success: false,

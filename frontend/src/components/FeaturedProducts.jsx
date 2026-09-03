@@ -55,10 +55,10 @@ const FeaturedProducts = ({ featuredProducts }) => {
 							{featuredProducts?.map((product) => (
 								<div
 									key={product._id}
-									className='flex-shrink-0 px-2'
+									className='shrink-0 px-2'
 									style={{ width: `${100 / itemsPerPage}%` }}
 								>
-									<div className='mx-auto h-full max-w-[270px] overflow-hidden rounded-md border border-[#d8d0d1] bg-white shadow-sm transition-all duration-300 hover:shadow-md'>
+									<div className='mx-auto h-full max-w-67.5 overflow-hidden rounded-md border border-[#d8d0d1] bg-white shadow-sm transition-all duration-300 hover:shadow-md'>
 										<div className='overflow-hidden bg-gray-100'>
 											<img
 												src={product.image}

@@ -16,7 +16,7 @@ export const getFeaturedProducts = async (req, res) => {
     try {
         let featuredProducts = await redis.get("featured_products");
         if (featuredProducts) {
-            res.json(JSON.parse(featuredProducts));
+            return res.json(JSON.parse(featuredProducts));
         }   
 
         //if not in redis, get from db

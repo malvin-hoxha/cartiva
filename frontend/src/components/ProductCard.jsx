@@ -20,9 +20,9 @@ const ProductCard = ({ product }) => {
 		<div className="group relative min-w-0 rounded-md border border-[#d8d0d1] bg-white p-2.5 shadow-sm transition-all duration-200 hover:shadow-md">
 			<div className="overflow-hidden rounded-md bg-gray-100">
 				{product.image ? (
-					<img className="aspect-[4/5] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]" src={product.image} alt={product.name} />
+					<img className="aspect-4/5 w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]" src={product.image} alt={product.name} />
 				) : (
-					<div className="flex aspect-[4/5] w-full items-center justify-center px-4 text-center text-sm text-gray-500">
+					<div className="flex aspect-4/5 w-full items-center justify-center px-4 text-center text-sm text-gray-500">
 						No image available
 					</div>
 				)}

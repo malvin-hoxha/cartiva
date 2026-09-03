@@ -11,7 +11,7 @@ const CartPage = () => {
 
 	return (
 		<div className='min-h-screen bg-[#ebe2e3] py-24 md:py-28'>
-			<div className='mx-auto max-w-screen-xl px-4 2xl:px-0'>
+			<div className='mx-auto max-w-7xl px-4 2xl:px-0'>
 				<div className='mb-8 text-center'>
 					<h1 className='text-3xl font-bold text-[#222] sm:text-[46px] sm:leading-13.5'>Shopping Cart</h1>
 					<p className='mt-2 text-base text-[#465b52]'>Review your Cartiva pieces before checkout.</p>

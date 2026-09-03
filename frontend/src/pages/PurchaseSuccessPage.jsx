@@ -49,21 +49,11 @@ const PurchaseSuccessPage = () => {
 					</h1>
 
 					<p className='text-[#465b52] text-center mb-2'>
-						Thank you for your order. {"We're"} processing it now.
+						Thank you for your order.
 					</p>
 					<p className='text-[#088178] text-center text-sm mb-6'>
-						Check your email for order details and updates.
+						Your payment was confirmed successfully.
 					</p>
-					<div className='bg-[#ebe2e3] rounded-md p-4 mb-6'>
-						<div className='flex items-center justify-between mb-2'>
-							<span className='text-sm text-[#465b52]'>Order number</span>
-							<span className='text-sm font-semibold text-[#088178]'>#12345</span>
-						</div>
-						<div className='flex items-center justify-between'>
-							<span className='text-sm text-[#465b52]'>Estimated delivery</span>
-							<span className='text-sm font-semibold text-[#088178]'>3-5 business days</span>
-						</div>
-					</div>
 
 					<div className='space-y-4'>
 						<button
